@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Update package databases and install Neovim, Git, and other dependencies without any prompts
 RUN pacman -Syu --noconfirm
-RUN pacman -S git neovim base-devel cargo gopls --noconfirm
+RUN pacman -S git neovim base-devel cargo gopls clang --noconfirm
 
 # Clone the config directory
 RUN mkdir -p ~/.config
